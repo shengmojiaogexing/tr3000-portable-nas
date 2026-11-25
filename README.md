@@ -18,7 +18,7 @@
 ---
 
 > [!CAUTION]
-> **刷机与安全提示**
+> **刷机与合规免责提示（使用前请阅读 [`DISCLAIMER.md`](DISCLAIMER.md)）**
 > 1. **闪存批次校验**：2025 年 11 月起生产的 Cudy TR3000 V1（SN 2543 及之后）更换了 `F50L1G41LC` 闪存芯片，**必须**使用 Cudy 官方新版过渡固件与 **OpenWrt / ImmortalWrt 24.10.5 及以上版本**（本方案实测使用 `24.10.7`），切勿刷入老版本固件以防无法启动。
 > 2. **445 端口与隐私红线**：国内运营商普遍封锁公网 445 端口且裸露 SMB 存在极高风险，本方案严禁直接暴露 445 到公网，外网 SMB 统一走 **EasyTier 端到端加密 P2P 隧道**。
 > 3. **仓库脱敏**：本仓库所有脚本与配置模板均已清除真实 IP、域名、Wi-Fi 密码、SSH 凭据与 Token，部署前请务必替换 `YOUR_*` 占位符并设置强密码。
@@ -157,7 +157,7 @@
 ### 四、多域名 HTTPS 与 443 端口 SNI 透明分流
 
 - 使用 `acme.sh` 通过 `/var/www/acme` 为所有域名签发免费 ECC SSL 证书并自动续期。
-- 如果 VPS 的 443 端口已运行其他服务（如代理节点），可参考 `deploy/nginx-https-sni.example.conf` 使用 Nginx `ngx_stream_module` (`ssl_preread on`) 在 443 端口按 SNI 域名透明分流：网站域名进本地 `127.0.0.1:10443` HTTPS，其余流量原样透传给 `127.0.0.1:4443`，互不干扰。
+- 如果 VPS 的 443 端口已运行其他 TCP/TLS 服务，可参考 `deploy/nginx-https-sni.example.conf` 使用 Nginx `ngx_stream_module` (`ssl_preread on`) 在 443 端口按 SNI 域名透明分流：网站域名进本地 `127.0.0.1:10443` HTTPS，其余流量原样透传给 `127.0.0.1:4443`，互不干扰。
 
 ### 五、原生接入 ZERO STUDIO 中控台
 
