@@ -1,0 +1,14 @@
+# 监控机 frpc 穿透模板：将微信/QQ IM 网关接入公网 VPS
+serverAddr = "YOUR_VPS_IP"
+serverPort = 7000
+
+[auth]
+method = "token"
+token = "YOUR_FRP_TOKEN"
+
+[[proxies]]
+name = "zero-im-gateway"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 8090
+remotePort = 18090

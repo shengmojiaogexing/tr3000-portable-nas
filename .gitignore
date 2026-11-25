@@ -1,0 +1,31 @@
+# 严禁提交大体积固件、离线插件包、客户端二进制与个人敏感配置
+firmware/
+packages/
+client/
+scripts/
+*.bin
+*.zip
+*.ipk
+*.exe
+*.dll
+*.sys
+*.db
+*.db-shm
+*.db-wal
+.env
+*.cred
+sessions_*.json
+shares.json
+
+# 忽略根目录含个人真实 IP / 密码的私有脚本与本地备忘文档
+/01_*.bat
+/02_*.bat
+/03_*.bat
+/99_*.bat
+/monitor_frpc.toml
+/ZERO_STUDIO与TR3000完整对接手册.md
+/TR3000刷机与外网SMB完整操作手册.md
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
