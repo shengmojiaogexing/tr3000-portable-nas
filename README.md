@@ -6,11 +6,12 @@
 
 无需昂贵成品 NAS，一台 200 元级 **Cudy TR3000 (MT7981B / 512MB RAM / 2.5G WAN + USB 3.0)** 搭配双盘位移动硬盘盒与一台入门公网 VPS，即可拥有 **局域网高速 SMB、外网 P2P 打洞直连、公网免脚本 FTP、网页在线看图/看视频/整文件夹流式 `.zip` 打包下载、带提取码的公开分享链接**，并可原生无缝接入 [`zero-studio-automation`](https://github.com/shengmojiaogexing/zero-studio-automation) 工作室中控台。
 
-[![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue)](https://www.gnu.org/licenses/gpl-3.0)
+[![License](https://img.shields.io/badge/license-GPL--3.0-blue)](LICENSE)
 [![Firmware](https://img.shields.io/badge/ImmortalWrt-24.10.7%20Filogic-6fa8a5)](#一tr3000-刷机与硬件适配)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](#三公网-vps-端部署)
 [![P2P](https://img.shields.io/badge/P2P-EasyTier%20%2B%20IPv6%20Direct-c4c698)](#核心特性)
 [![UI](https://img.shields.io/badge/UI-ZERO%20STUDIO%20Glassmorphism-e2bac8)](#核心特性)
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E8%B5%9E%E8%B5%8F%E6%94%AF%E6%8C%81-ff69b4?logo=githubsponsors)](#支持与赞赏)
 
 </div>
 
@@ -38,6 +39,8 @@
   - [五、原生接入 ZERO STUDIO 中控台](#五原生接入-zero-studio-中控台)
 - [项目结构](#项目结构)
 - [常见问题](#常见问题)
+- [支持与赞赏](#支持与赞赏)
+- [开源协议](#开源协议)
 
 ---
 
@@ -211,6 +214,27 @@ register_nas_routes(app, require_session)
 
 ---
 
+## ☕ 支持与赞赏
+
+如果这个便携 NAS 与摄影工作室云端方案帮到了你、为你省下了买成品 NAS 或折腾刷机的时间，欢迎请作者喝杯咖啡，感谢支持开源维护！
+
+<div align="center">
+<table>
+  <tr>
+    <td align="center">
+      <img src="docs/sponsor/wechat.jpg" width="220" alt="微信赞赏码" /><br/>
+      <sub><b>微信赞赏</b></sub>
+    </td>
+    <td align="center">
+      <img src="docs/sponsor/alipay.jpg" width="220" alt="支付宝赞赏码" /><br/>
+      <sub><b>支付宝赞赏</b></sub>
+    </td>
+  </tr>
+</table>
+</div>
+
+---
+
 ## 📄 开源协议
 
-本项目采用 **GPL-3.0-or-later** 协议开源，配套工作室全链路系统参见 [shengmojiaogexing/zero-studio-automation](https://github.com/shengmojiaogexing/zero-studio-automation)。
+本项目基于 **[GNU General Public License v3.0 (GPL-3.0)](LICENSE)** 协议开源，配套工作室全链路自动化系统参见 [shengmojiaogexing/zero-studio-automation](https://github.com/shengmojiaogexing/zero-studio-automation)。
